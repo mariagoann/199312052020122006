@@ -125,7 +125,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 							
 							if($_value['id_pendaftar']==$value['id'] && $_value['jenis_attr']=='url_file'){
-								echo "<td><a hrf='".$_value['value']."'>File</td>";
+								echo "<td><a href='".$_value['value']."'>File</td>";
 							}
 						}
 						echo "</tr>";
