@@ -110,6 +110,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						echo "<td>".$value['database_yang_dikuasai']."</td>";
 						echo "<td>".$value['tools_yang_dikuasai']."</td>";
 						echo "<td>".$value['pernah_membuat_mobile_apps']."</td>";
+						foreach ($attribut as $_key => $_value) {
+							if($_value['id_pendaftar']==$value['id'] && $_value['jenis_attr']=='nilai_t1'){
+								echo "<td>".$_value['value']."</td>";
+							}
+
+							if($_value['id_pendaftar']==$value['id'] && $_value['jenis_attr']=='nilai_t2'){
+								echo "<td>".$_value['value']."</td>";
+							}
+
+							if($_value['id_pendaftar']==$value['id'] && $_value['jenis_attr']=='nilai_t3'){
+								echo "<td>".$_value['value']."</td>";
+							}
+
+							
+							if($_value['id_pendaftar']==$value['id'] && $_value['jenis_attr']=='url_file'){
+								echo "<td><a hrf='".$_value['value']."'>File</td>";
+							}
+						}
 						echo "</tr>";
 						$i++;
 					}
